@@ -198,7 +198,7 @@ namespace Battleships
             const int BG_Y = 453;
 
             int fullW;
-            Rectangle toDraw;
+            Rectangle toDraw = new Rectangle();
 
             fullW = 260 * number / STEPS;
             SwinGame.DrawBitmap(_LoaderEmpty, BG_X, BG_Y);
@@ -209,8 +209,8 @@ namespace Battleships
             toDraw.Y = TY;
             toDraw.Width = TW;
             toDraw.Height = TH;
-            SwinGame.DrawTextLines(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, toDraw);
-            // SwinGame.DrawTextLines(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, TX, TY, TW, TH)
+            SwinGame.DrawText(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, toDraw);
+            // SwinGame.DrawText(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, TX, TY, TW, TH)
 
             SwinGame.RefreshScreen();
             SwinGame.ProcessEvents();
@@ -263,30 +263,27 @@ namespace Battleships
 
         private static void FreeFonts()
         {
-            Font obj;
-            foreach (var obj in _Fonts.Values)
-                SwinGame.FreeFont(obj);
+            foreach (Font f in _Fonts.Values)
+                SwinGame.FreeFont(f);
         }
 
         private static void FreeImages()
         {
-            Bitmap obj;
-            foreach (var obj in _Images.Values)
-                SwinGame.FreeBitmap(obj);
+            foreach (Bitmap b in _Images.Values)
+                SwinGame.FreeBitmap(b);
         }
 
         private static void FreeSounds()
         {
-            SoundEffect obj;
-            foreach (var obj in _Sounds.Values)
-                Audio.FreeSoundEffect(obj);
+
+            foreach (SoundEffect se in _Sounds.Values)
+                Audio.FreeSoundEffect(se);
         }
 
         private static void FreeMusic()
         {
-            Music obj;
-            foreach (var obj in _Music.Values)
-                Audio.FreeMusic(obj);
+            foreach (Music m in _Music.Values)
+                Audio.FreeMusic(m);
         }
 
         public static void FreeResources()

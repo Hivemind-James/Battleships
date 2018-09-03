@@ -61,7 +61,6 @@ namespace Battleships
                     default:
                         {
                             throw new ApplicationException("AI has gone in an imvalid state");
-                            break;
                         }
                 }
             }
@@ -75,7 +74,7 @@ namespace Battleships
         /// <param name="row">row generated around the hit tile</param>
         /// <param name="column">column generated around the hit tile</param>
         private void TargetCoords(ref int row, ref int column)
-        {
+        {`
             Location l = _Targets.Pop();
 
             if ((_Targets.Count == 0))

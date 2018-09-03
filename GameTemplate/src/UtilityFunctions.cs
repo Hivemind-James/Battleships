@@ -126,20 +126,20 @@ namespace Battleships
                 {
                     colLeft = left + (cellGap + cellWidth) * col;
 
-                    Color fillColor;
+                    Color fillColor = Color.Black;
                     bool draw;
 
                     draw = true;
 
                     switch (grid.Item(row, col))
                     {
-                        case object _ when TileView.Ship:
+                        case TileView.Ship:
                             {
                                 draw = false;
                                 break;
                             }
 
-                        case object _ when TileView.Miss:
+                        case TileView.Miss:
                             {
                                 if (small)
                                     fillColor = SMALL_MISS;
@@ -148,7 +148,7 @@ namespace Battleships
                                 break;
                             }
 
-                        case object _ when TileView.Hit:
+                        case TileView.Hit:
                             {
                                 if (small)
                                     fillColor = SMALL_HIT;
@@ -157,8 +157,7 @@ namespace Battleships
                                 break;
                             }
 
-                        case object _ when TileView.Sea:
-                        case object _ when TileView.Ship:
+                        case TileView.Sea:
                             {
                                 if (small)
                                     fillColor = SMALL_SEA;
@@ -206,7 +205,7 @@ namespace Battleships
                 }
 
                 if (!small)
-                    SwinGame.DrawBitmap(GameImage(shipName), colLeft, rowTop);
+                    SwinGame.DrawBitmap(GameResources.GameImage(shipName), colLeft, rowTop);
                 else
                 {
                     SwinGame.FillRectangle(SHIP_FILL_COLOR, colLeft, rowTop, shipWidth, shipHeight);
@@ -239,7 +238,7 @@ namespace Battleships
         /// </summary>
         public static void DrawMessage()
         {
-            SwinGame.DrawText(Message, MESSAGE_COLOR, GameFont("Courier"), FIELD_LEFT, MESSAGE_TOP);
+            SwinGame.DrawText(Message, MESSAGE_COLOR, GameResources.GameFont("Courier"), FIELD_LEFT, MESSAGE_TOP);
         }
 
         /// <summary>
@@ -247,27 +246,27 @@ namespace Battleships
         /// </summary>
         public static void DrawBackground()
         {
-            switch (CurrentState)
+            switch (GameController.CurrentState)
             {
-                case object _ when GameState.ViewingMainMenu:
-                case object _ when GameState.ViewingGameMenu:
-                case object _ when GameState.AlteringSettings:
-                case object _ when GameState.ViewingHighScores:
+                case GameState.ViewingMainMenu:
+                case GameState.ViewingGameMenu:
+                case GameState.AlteringSettings:
+                case GameState.ViewingHighScores:
                     {
-                        SwinGame.DrawBitmap(GameImage("Menu"), 0, 0);
+                        SwinGame.DrawBitmap(GameResources.GameImage("Menu"), 0, 0);
                         break;
                     }
 
-                case object _ when GameState.Discovering:
-                case object _ when GameState.EndingGame:
+                case GameState.Discovering:
+                case GameState.EndingGame:
                     {
-                        SwinGame.DrawBitmap(GameImage("Discovery"), 0, 0);
+                        SwinGame.DrawBitmap(GameResources.GameImage("Discovery"), 0, 0);
                         break;
                     }
 
-                case object _ when GameState.Deploying:
+                case GameState.Deploying:
                     {
-                        SwinGame.DrawBitmap(GameImage("Deploy"), 0, 0);
+                        SwinGame.DrawBitmap(GameResources.GameImage("Deploy"), 0, 0);
                         break;
                     }
 
@@ -298,7 +297,7 @@ namespace Battleships
             Sprite s;
             Bitmap imgObj;
 
-            imgObj = GameImage(image);
+            imgObj = GameResources.GameImage(image);
             imgObj.SetCellDetails(40, 40, 3, 3, 7);
 
             AnimationScript animation;
@@ -318,7 +317,7 @@ namespace Battleships
             foreach (Sprite s in _Animations)
             {
                 SwinGame.UpdateSprite(s);
-                if (s.animationHasEnded)
+                if (s.AnimationHasEnded)
                     ended.Add(s);
             }
 
@@ -341,7 +340,7 @@ namespace Battleships
             for (i = 1; i <= ANIMATION_CELLS * FRAMES_PER_CELL; i++)
             {
                 UpdateAnimations();
-                DrawScreen();
+                GameController.DrawScreen();
             }
         }
     }

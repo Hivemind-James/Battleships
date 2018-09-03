@@ -58,7 +58,7 @@ namespace Battleships
             }
         }
 
-        public TileView this[int x, int y]
+        public TileView Item(int x, int y)
         {
         }
 

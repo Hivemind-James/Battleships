@@ -91,13 +91,13 @@ namespace Battleships
             // create the players
             switch (_aiSetting)
             {
-                case object _ when AIOption.Medium:
+                case AIOption.Medium:
                     {
                         _ai = new AIMediumPlayer(_theGame);
                         break;
                     }
 
-                case object _ when AIOption.Hard:
+                case AIOption.Hard:
                     {
                         _ai = new AIHardPlayer(_theGame);
                         break;
@@ -145,21 +145,21 @@ namespace Battleships
         private static void PlayHitSequence(int row, int column, bool showAnimation)
         {
             if (showAnimation)
-                AddExplosion(row, column);
+                UtilityFunctions.AddExplosion(row, column);
 
-            Audio.PlaySoundEffect(GameSound("Hit"));
+            Audio.PlaySoundEffect(GameResources.GameSound("Hit"));
 
-            DrawAnimationSequence();
+            UtilityFunctions.DrawAnimationSequence();
         }
 
         private static void PlayMissSequence(int row, int column, bool showAnimation)
         {
             if (showAnimation)
-                AddSplash(row, column);
+                UtilityFunctions.AddSplash(row, column);
 
-            Audio.PlaySoundEffect(GameSound("Miss"));
+            Audio.PlaySoundEffect(GameResources.GameSound("Miss"));
 
-            DrawAnimationSequence();
+            UtilityFunctions.DrawAnimationSequence();
         }
 
         /// <summary>
@@ -176,52 +176,52 @@ namespace Battleships
             isHuman = _theGame.Player == HumanPlayer;
 
             if (isHuman)
-                Message = "You " + result.ToString();
+                UtilityFunctions.Message = "You " + result.ToString();
             else
-                Message = "The AI " + result.ToString();
+                UtilityFunctions.Message = "The AI " + result.ToString();
 
             switch (result.Value)
             {
-                case object _ when ResultOfAttack.Destroyed:
+                case ResultOfAttack.Destroyed:
                     {
                         PlayHitSequence(result.Row, result.Column, isHuman);
-                        Audio.PlaySoundEffect(GameSound("Sink"));
+                        Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
                         break;
                     }
 
-                case object _ when ResultOfAttack.GameOver:
+                case ResultOfAttack.GameOver:
                     {
                         PlayHitSequence(result.Row, result.Column, isHuman);
-                        Audio.PlaySoundEffect(GameSound("Sink"));
+                        Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
 
-                        while (Audio.SoundEffectPlaying(GameSound("Sink")))
+                        while (Audio.SoundEffectPlaying(GameResources.GameSound("Sink")))
                         {
                             SwinGame.Delay(10);
                             SwinGame.RefreshScreen();
                         }
 
                         if (HumanPlayer.IsDestroyed)
-                            Audio.PlaySoundEffect(GameSound("Lose"));
+                            Audio.PlaySoundEffect(GameResources.GameSound("Lose"));
                         else
-                            Audio.PlaySoundEffect(GameSound("Winner"));
+                            Audio.PlaySoundEffect(GameResources.GameSound("Winner"));
                         break;
                     }
 
-                case object _ when ResultOfAttack.Hit:
+                case ResultOfAttack.Hit:
                     {
                         PlayHitSequence(result.Row, result.Column, isHuman);
                         break;
                     }
 
-                case object _ when ResultOfAttack.Miss:
+                case ResultOfAttack.Miss:
                     {
                         PlayMissSequence(result.Row, result.Column, isHuman);
                         break;
                     }
 
-                case object _ when ResultOfAttack.ShotAlready:
+                case ResultOfAttack.ShotAlready:
                     {
-                        Audio.PlaySoundEffect(GameSound("Error"));
+                        Audio.PlaySoundEffect(GameResources.GameSound("Error"));
                         break;
                     }
             }
@@ -284,14 +284,14 @@ namespace Battleships
         {
             switch (result.Value)
             {
-                case object _ when ResultOfAttack.Miss:
+                case ResultOfAttack.Miss:
                     {
                         if (_theGame.Player == ComputerPlayer)
                             AIAttack();
                         break;
                     }
 
-                case object _ when ResultOfAttack.GameOver:
+                case ResultOfAttack.GameOver:
                     {
                         SwitchState(GameState.EndingGame);
                         break;
@@ -314,43 +314,43 @@ namespace Battleships
 
             switch (CurrentState)
             {
-                case object _ when GameState.ViewingMainMenu:
+                case GameState.ViewingMainMenu:
                     {
-                        HandleMainMenuInput();
+                        MenuController.HandleMainMenuInput();
                         break;
                     }
 
-                case object _ when GameState.ViewingGameMenu:
+                case GameState.ViewingGameMenu:
                     {
-                        HandleGameMenuInput();
+                        MenuController.HandleGameMenuInput();
                         break;
                     }
 
-                case object _ when GameState.AlteringSettings:
+                case GameState.AlteringSettings:
                     {
                         HandleSetupMenuInput();
                         break;
                     }
 
-                case object _ when GameState.Deploying:
+                case GameState.Deploying:
                     {
                         HandleDeploymentInput();
                         break;
                     }
 
-                case object _ when GameState.Discovering:
+                case GameState.Discovering:
                     {
                         HandleDiscoveryInput();
                         break;
                     }
 
-                case object _ when GameState.EndingGame:
+                case GameState.EndingGame:
                     {
                         HandleEndOfGameInput();
                         break;
                     }
 
-                case object _ when GameState.ViewingHighScores:
+                case GameState.ViewingHighScores:
                     {
                         HandleHighScoreInput();
                         break;
@@ -372,43 +372,43 @@ namespace Battleships
 
             switch (CurrentState)
             {
-                case object _ when GameState.ViewingMainMenu:
+                case GameState.ViewingMainMenu:
                     {
                         DrawMainMenu();
                         break;
                     }
 
-                case object _ when GameState.ViewingGameMenu:
+                case GameState.ViewingGameMenu:
                     {
                         DrawGameMenu();
                         break;
                     }
 
-                case object _ when GameState.AlteringSettings:
+                case GameState.AlteringSettings:
                     {
                         DrawSettings();
                         break;
                     }
 
-                case object _ when GameState.Deploying:
+                case GameState.Deploying:
                     {
                         DrawDeployment();
                         break;
                     }
 
-                case object _ when GameState.Discovering:
+                case GameState.Discovering:
                     {
                         DrawDiscovery();
                         break;
                     }
 
-                case object _ when GameState.EndingGame:
+                case GameState.EndingGame:
                     {
                         DrawEndOfGame();
                         break;
                     }
 
-                case object _ when GameState.ViewingHighScores:
+                case GameState.ViewingHighScores:
                     {
                         DrawHighScores();
                         break;
