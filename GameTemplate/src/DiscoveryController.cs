@@ -8,19 +8,17 @@ using System.Diagnostics;
 using SwinGameSDK;
 
 /// <summary>
-/// The battle phase is handled by the DiscoveryController.
+/// static class DiscoveryController: This class will be used to implement the Battle phsae of the game.
 /// </summary>
 static class DiscoveryController
 {
 
 	/// <summary>
-	/// Handles input during the discovery phase of the game.
-	/// </summary>
-	/// <remarks>
-	/// Escape opens the game menu. Clicking the mouse will
-	/// attack a location.
+    /// public static void HandleDiscoveryInput: This is a static void method that does not take in any parameters and also does not return anything.
+    /// It contains if loop so when escape key is pressed, the game returns to game menu state and clicking the left button calls the DoAttack function to
+    /// attack a location.
     /// Isuru: Updated Keycodes
-	/// </remarks>
+	/// </summary>
 	public static void HandleDiscoveryInput()
 	{
         if (SwinGame.KeyTyped(KeyCode.EscapeKey)) {
@@ -32,10 +30,11 @@ static class DiscoveryController
 		}
 	}
 
-	/// <summary>
-	/// Attack the location that the mouse if over.
-	/// </summary>
-	private static void DoAttack()
+    /// <summary>
+    /// public static void DoAttack: This is a static void method that does not take in any parameters and also does not return anything.
+    /// It contains code for the attacking part of the game, it will attack the location that the mouse is over.
+    /// </summary>
+    private static void DoAttack()
 	{
 		Point2D mouse = default(Point2D);
 
@@ -54,13 +53,11 @@ static class DiscoveryController
 		}
 	}
 
-	/// <summary>
-	/// Draws the game during the attack phase.
-	/// </summary>
-    /// <remarks>
-    /// Isuru: Updated keycodes
-    /// </remarks>
-	public static void DrawDiscovery()
+    /// <summary>
+    /// public static void DrawDiscovery: This is a static void method that does not take in any parameters and also does not return anything.
+    /// This void draws the game during its attack phase.
+    /// </summary>
+    public static void DrawDiscovery()
 	{
 		const int SCORES_LEFT = 172;
 		const int SHOTS_TOP = 157;
