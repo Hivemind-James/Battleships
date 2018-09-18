@@ -80,6 +80,7 @@ public class Ship
 
 		//gets the ship size from the enumarator
 		_sizeOfShip = (int) _shipName;
+        if (_sizeOfShip < 2) _sizeOfShip = 3; 
 	}
 
 	/// <summary>
