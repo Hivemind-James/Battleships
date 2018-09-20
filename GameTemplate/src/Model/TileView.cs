@@ -6,12 +6,12 @@ using System.Collections.Generic;
 //using System.Data;
 using System.Diagnostics;
 /// <summary>
-/// The values that are visable for a given tile.
+/// The values that are visable for a given tile at any given time.
 /// </summary>
 public enum TileView
 {
 	/// <summary>
-	/// The viewer can see sea
+	/// The viewer can see sea (all tiles)
 	/// </summary>
 	/// <remarks>
 	/// May be masking a ship if viewed via a sea adapter
@@ -20,25 +20,18 @@ public enum TileView
 
 	/// <summary>
 	/// The viewer knows that site was attacked but nothing
-	/// was hit
+	/// was hit (miss filled blue square)
 	/// </summary>
 	Miss,
 
 	/// <summary>
-	/// The viewer can see a ship at this site
+	/// The viewer can see a ship at this site (hit fill red)
 	/// </summary>
 	Ship,
 
 	/// <summary>
 	/// The viewer knows that the site was attacked and
-	/// something was hit
+	/// something was hit (hit animation)
 	/// </summary>
 	Hit
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================

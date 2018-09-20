@@ -19,9 +19,7 @@ static class MenuController
 	/// <summary>
 	/// The menu structure for the game.
 	/// </summary>
-	/// <remarks>
-	/// These are the text captions for the menu items.
-	/// </remarks>
+    // this draws the menu buttons and sets the regions.
 	private static readonly string[][] _menuStructure = {
 		new string[] {
 			"PLAY",
