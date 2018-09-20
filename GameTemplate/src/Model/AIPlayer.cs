@@ -109,7 +109,7 @@ public abstract class AIPlayer : Player
 		int row = 0;
 		int column = 0;
 
-		//keep hitting until a miss
+		//this code is where the enemy will shoot or "hit" untill it misses.
 		do {
 			Delay();
 
@@ -140,10 +140,3 @@ public abstract class AIPlayer : Player
 		}
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================

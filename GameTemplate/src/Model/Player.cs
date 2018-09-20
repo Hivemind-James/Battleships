@@ -198,12 +198,13 @@ public class Player : IEnumerable<Ship>
 		return result;
 	}
 
+    //this is the randomise buttons code.
 	public virtual void RandomizeDeployment()
 	{
 		bool placementSuccessful = false;
 		Direction heading = default(Direction);
 
-		//for each ship to deploy in shipist
+		//for each ship to deply
 
 		foreach (ShipName shipToPlace in Enum.GetValues(typeof(ShipName))) {
 			if (shipToPlace == ShipName.None)
@@ -211,7 +212,8 @@ public class Player : IEnumerable<Ship>
 
 			placementSuccessful = false;
 
-			//generate random position until the ship can be placed
+			//generate random position until the ship can be placed (unplaceable on other ships)
+
 			do {
 				int dir = _Random.Next(2);
 				int x = _Random.Next(0, 11);
@@ -224,7 +226,7 @@ public class Player : IEnumerable<Ship>
 					heading = Direction.LeftRight;
 				}
 
-				//try to place ship, if position unplaceable, generate new coordinates
+				//try to place ship, if position unplaceable, generate new coordinates and try again till placeable.
 				try {
 					PlayerGrid.MoveShip(x, y, shipToPlace, heading);
 					placementSuccessful = true;
@@ -235,10 +237,3 @@ public class Player : IEnumerable<Ship>
 		}
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================
