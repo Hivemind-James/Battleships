@@ -40,6 +40,7 @@ public static class GameResources
 		NewImage("SelectedShip", "deploy_button_hl.png");
 		NewImage("PlayButton", "deploy_play_button.png");
 		NewImage("RandomButton", "deploy_randomize_button.png");
+        NewImage("DisabledPlayButton", "deploy_play_button_disabled.png");
 
 		//Ships
 		int i = 0;
