@@ -6,8 +6,8 @@ using System.Collections.Generic;
 //using System.Data;
 using System.Diagnostics;
 /// <summary>
-/// Tile knows its location on the grid, if it is a ship and if it has been 
-/// shot before
+/// Tile : knows its location on the grid, if it is a ship and if it has been 
+/// shot before.
 /// </summary>
 public class Tile
 {
@@ -21,7 +21,7 @@ public class Tile
 	private bool _Shot = false;
 
 	/// <summary>
-	/// Has the tile been shot?
+    /// Shot : Has the tile been shot?
 	/// </summary>
 	/// <value>indicate if the tile has been shot</value>
 	/// <returns>true if the tile was shot</returns>
@@ -31,7 +31,7 @@ public class Tile
 	}
 
 	/// <summary>
-	/// The row of the tile in the grid
+    /// Row : The row of the tile in the grid.
 	/// </summary>
 	/// <value>the row index of the tile in the grid</value>
 	/// <returns>the row index of the tile</returns>
@@ -40,7 +40,7 @@ public class Tile
 	}
 
 	/// <summary>
-	/// The column of the tile in the grid
+    /// Colums : The column of the tile in the grid.
 	/// </summary>
 	/// <value>the column of the tile in the grid</value>
 	/// <returns>the column of the tile in the grid</returns>
@@ -49,7 +49,7 @@ public class Tile
 	}
 
 	/// <summary>
-	/// Ship allows for a tile to check if there is ship and add a ship to a tile
+    /// Ship :  allows for a tile to check if there is ship and if not add a ship to a tile.
 	/// </summary>
 	public Ship Ship {
 		get { return _Ship; }
@@ -66,7 +66,7 @@ public class Tile
 	}
 
 	/// <summary>
-	/// The tile constructor will know where it is on the grid, and is its a ship
+    /// Tile : This constructor will know where it is on the grid, and if its a ship.
 	/// </summary>
 	/// <param name="row">the row on the grid</param>
 	/// <param name="col">the col on the grid</param>
@@ -79,7 +79,7 @@ public class Tile
 	}
 
 	/// <summary>
-	/// Clearship will remove the ship from the tile
+    /// Clearship : will remove the ship from the tile.
 	/// </summary>
 	public void ClearShip()
 	{
@@ -87,7 +87,7 @@ public class Tile
 	}
 
 	/// <summary>
-	/// View is able to tell the grid what the tile is
+    /// TielView : is able to tell the grid what the tile is
 	/// </summary>
 	public TileView View {
 		get {
@@ -114,8 +114,8 @@ public class Tile
 	}
 
 	/// <summary>
-	/// Shoot allows a tile to be shot at, and if the tile has been hit before
-	/// it will give an error
+    /// Shoot : allows a tile to be shot at, and if the tile has been hit before
+	/// it will give throw an exception.
 	/// </summary>
 	internal void Shoot()
 	{
@@ -129,10 +129,3 @@ public class Tile
 		}
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================

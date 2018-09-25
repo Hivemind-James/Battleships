@@ -1,4 +1,3 @@
-
 using Microsoft.VisualBasic;
 using System;
 using System.Collections;
@@ -7,9 +6,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using SwinGameSDK;
 
+/// <summary>
+/// public static class GameResources: This class will be used to add the needed resources to the game once running.
+/// </summary>
 public static class GameResources
 {
-
+    /// <summary>
+    /// This is a static void method that does not take in any parameters and also does not return anything.
+    /// It Loads the required fonts to the game.
+    /// </summary>
 	private static void LoadFonts()
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
@@ -18,6 +23,10 @@ public static class GameResources
 		NewFont("Menu", "ffaccess.ttf", 8);
 	}
 
+    /// <summary>
+    /// This is a static void method that does not take in any parameters and also does not return anything.
+    /// It Loads the required images to the game.
+    /// </summary>
 	private static void LoadImages()
 	{
 		//Backgrounds
@@ -45,6 +54,10 @@ public static class GameResources
 
 	}
 
+    /// <summary>
+    /// This is a static void method that does not take in any parameters and also does not return anything.
+    /// It Loads the required sounds to the game.
+    /// </summary>
 	private static void LoadSounds()
 	{
 		NewSound("Error", "error.wav");
@@ -56,50 +69,50 @@ public static class GameResources
 		NewSound("Lose", "lose.wav");
 	}
 
+    /// <summary>
+    /// This is a static void method that does not take in any parameters and also does not return anything.
+    /// It Loads the required music to the game.
+    /// </summary>
 	private static void LoadMusic()
 	{
 		NewMusic("Background", "horrordrone.mp3");
 	}
 
 	/// <summary>
-	/// Gets a Font Loaded in the Resources
+    /// public static Font : Gets a Font Loaded in the Resources.
 	/// </summary>
 	/// <param name="font">Name of Font</param>
 	/// <returns>The Font Loaded with this Name</returns>
-
 	public static Font GameFont(string font)
 	{
 		return _Fonts[font];
 	}
 
 	/// <summary>
-	/// Gets an Image loaded in the Resources
+    /// public static Bitmap : Gets an Image loaded in the Resources.
 	/// </summary>
 	/// <param name="image">Name of image</param>
 	/// <returns>The image loaded with this name</returns>
-
 	public static Bitmap GameImage(string image)
 	{
 		return _Images[image];
 	}
 
 	/// <summary>
-	/// Gets an sound loaded in the Resources
+    /// public static SoundEffect: Gets an sound loaded in the Resources.
 	/// </summary>
 	/// <param name="sound">Name of sound</param>
 	/// <returns>The sound with this name</returns>
-
 	public static SoundEffect GameSound(string sound)
 	{
 		return _Sounds[sound];
 	}
 
 	/// <summary>
-	/// Gets the music loaded in the Resources
+    /// public static Music: Gets the music loaded in the Resources.
 	/// </summary>
 	/// <param name="music">Name of music</param>
 	/// <returns>The music with this name</returns>
-
 	public static Music GameMusic(string music)
 	{
 		return _Music[music];
@@ -108,21 +121,20 @@ public static class GameResources
 	private static Dictionary<string, Bitmap> _Images = new Dictionary<string, Bitmap>();
 	private static Dictionary<string, Font> _Fonts = new Dictionary<string, Font>();
 	private static Dictionary<string, SoundEffect> _Sounds = new Dictionary<string, SoundEffect>();
-
 	private static Dictionary<string, Music> _Music = new Dictionary<string, Music>();
 	private static Bitmap _Background;
 	private static Bitmap _Animation;
 	private static Bitmap _LoaderFull;
 	private static Bitmap _LoaderEmpty;
 	private static Font _LoadingFont;
-
 	private static SoundEffect _StartSound;
-	/// <summary>
-	/// The Resources Class stores all of the Games Media Resources, such as Images, Fonts
-	/// Sounds, Music.
-	/// </summary>
 
-	public static void LoadResources()
+    /// <summary>
+    /// This is a static void method that does not take in any parameters and also does not return anything.
+    /// This void stores all of the Games Media Resources, such as Images, Fonts
+    /// Sounds, Music.
+    /// </summary>
+    public static void LoadResources()
 	{
 		int width = 0;
 		int height = 0;
@@ -157,11 +169,9 @@ public static class GameResources
 	}
 
     /// <summary>
-    /// Shows the loading screen.
+    /// This is a static void method that does not take in any parameters and also does not return anything.
+    /// This void Shows the loading screen of the game.
     /// </summary>
-    /// <remarks>
-    /// Isuru: Updated the LoadBitmap call
-    /// </remarks>
 	private static void ShowLoadingScreen()
 	{
 		_Background = SwinGame.LoadBitmap("SplashBack.png");
@@ -180,7 +190,8 @@ public static class GameResources
 	}
 
     /// <summary>
-    /// Plays the swin game intro.
+    /// This is a static void method that does not take in any parameters and also does not return anything.
+    /// This void Plays the swin game intro.
     /// </summary>
     /// <remarks>
     /// Isuru: TODO: remove the old swingame intro 
@@ -210,6 +221,12 @@ public static class GameResources
 
 	}
 
+    /// <summary>
+    /// This is a static void method that takes in string and an integer as parameters and does not return anything.
+    /// This void Shows a message in the game.
+    /// </summary>
+    /// <param name="message">Message.</param>
+    /// <param name="number">Number.</param>
 	private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;
@@ -243,6 +260,12 @@ public static class GameResources
 		SwinGame.ProcessEvents();
 	}
 
+    /// <summary>
+    /// This is a static void method that takes in integer's as parameters and does not return anything.
+    /// This void Ends the loading screen and displays the next state.
+    /// </summary>
+    /// <param name="width">Width.</param>
+    /// <param name="height">Height.</param>
 	private static void EndLoadingScreen(int width, int height)
 	{
 		SwinGame.ProcessEvents();
@@ -258,47 +281,73 @@ public static class GameResources
 		SwinGame.ChangeScreenSize(width, height);
 	}
 
-    /// <remarks>
-    /// Isuru : updated the swingame call
-    /// </remarks>
+    /// <summary>
+    /// This is a static void method that takes in two strings and an integr as parameters and also does not return anything.
+    /// This void News fonts to the game screen.
+    /// </summary>
+    /// <param name="fontName">Font name.</param>
+    /// <param name="filename">Filename.</param>
+    /// <param name="size">Size.</param>
 	private static void NewFont(string fontName, string filename, int size)
 	{
 		_Fonts.Add(fontName, SwinGame.LoadFont(filename, size));
 	}
 
-	/// <remarks>
-	/// Isuru : updated the swingame call
-	/// </remarks>
-	private static void NewImage(string imageName, string filename)
+    /// <summary>
+    /// This is a static void method that takes in two strings as parameters and does not return anything.
+    /// This void News images to the game screen.
+    /// </summary>
+    /// <param name="imageName">Image name.</param>
+    /// <param name="filename">Filename.</param>
+    private static void NewImage(string imageName, string filename)
 	{
 		_Images.Add(imageName, SwinGame.LoadBitmap(filename));
 	}
 
-    ///<remarks>
-    /// Isuru: Updated call
-    /// </remarks>
-	private static void NewTransparentColorImage(string imageName, string fileName, Color transColor)
+    /// <summary>
+    /// This is a static void method that takes in two strings and a Color from swingame library as parameters and does not return anything.
+    /// This void News the transparent color image.
+    /// </summary>
+    /// <param name="imageName">Image name.</param>
+    /// <param name="fileName">File name.</param>
+    /// <param name="transColor">Trans color.</param>
+    private static void NewTransparentColorImage(string imageName, string fileName, Color transColor)
 	{
         Bitmap bitmap = SwinGame.LoadBitmap (SwinGame.PathToResource (fileName,ResourceKind.BitmapResource));
 		//Bitmap bitmap = SwinGame.LoadBitmap (SwinGame.PathToResource (fileName, ResourceKind.BitmapResource), true, transColor);
 		_Images.Add(imageName, bitmap);
 	}
-
 	private static void NewTransparentColourImage(string imageName, string fileName, Color transColor)
 	{
 		NewTransparentColorImage(imageName, fileName, transColor);
 	}
 
+    /// <summary>
+    /// This is a static void method that takes in two strings as parameters and does not return anything.
+    /// This void News the sound.
+    /// </summary>
+    /// <param name="soundName">Sound name.</param>
+    /// <param name="filename">Filename.</param>
 	private static void NewSound(string soundName, string filename)
 	{
 		_Sounds.Add(soundName, Audio.LoadSoundEffect(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 	}
 
+    /// <summary>
+    /// This is a static void method that takes in two strings as parameters and does not return anything.
+    /// This void News the music.
+    /// </summary>
+    /// <param name="musicName">Music name.</param>
+    /// <param name="filename">Filename.</param>
 	private static void NewMusic(string musicName, string filename)
 	{
 		_Music.Add(musicName, Audio.LoadMusic(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 	}
 
+    /// <summary>
+    /// This is a static void method that takes no parameters and does not return anything.
+    /// This void Frees the fonts.
+    /// </summary>
 	private static void FreeFonts()
 	{
 		foreach (Font obj in _Fonts.Values) {
@@ -306,21 +355,33 @@ public static class GameResources
 		}
 	}
 
-	private static void FreeImages()
+    /// <summary>
+    /// This is a static void method that takes no parameters and does not return anything.
+    /// This void Frees the images.
+    /// </summary>
+    private static void FreeImages()
 	{
 		foreach (Bitmap obj in _Images.Values) {
 			SwinGame.FreeBitmap(obj);
 		}
 	}
 
-	private static void FreeSounds()
+    /// <summary>
+    /// This is a static void method that takes no parameters and does not return anything.
+    /// This void Frees the sounds.
+    /// </summary>
+    private static void FreeSounds()
 	{		
 		foreach (SoundEffect obj in _Sounds.Values) {
 			Audio.FreeSoundEffect(obj);
 		}
 	}
 
-	private static void FreeMusic()
+    /// <summary>
+    /// This is a static void method that takes no parameters and does not return anything.
+    /// This void Frees the music.
+    /// </summary>
+    private static void FreeMusic()
 	{
 
 		foreach (Music obj in _Music.Values) {
@@ -328,7 +389,11 @@ public static class GameResources
 		}
 	}
 
-	public static void FreeResources()
+    /// <summary>
+    /// This is a static void method that takes no parameters and does not return anything.
+    /// This void Frees the resources.
+    /// </summary>
+    public static void FreeResources()
 	{
 		FreeFonts();
 		FreeImages();
