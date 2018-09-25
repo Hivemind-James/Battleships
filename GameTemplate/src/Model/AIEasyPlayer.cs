@@ -94,13 +94,16 @@ public class AIEasyPlayer : AIPlayer
 
 	protected override void ProcessShot(int row, int col, AttackResult result)
 	{
-		if (result.Value == ResultOfAttack.Hit) {
+        if (result.Value == ResultOfAttack.Hit)
+        {
 			_CurrentState = AIStates.TargetingShip;
 			AddTarget(row - 1, col);
 			AddTarget(row, col - 1);
 			AddTarget(row + 1, col);
 			AddTarget(row, col + 1);
-		} else if (result.Value == ResultOfAttack.ShotAlready) {
+		} 
+        else if (result.Value == ResultOfAttack.ShotAlready) 
+        {
 			throw new ApplicationException("Error in AI");
 		}
 	}
