@@ -152,3 +152,4 @@ D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTe
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\bin\Debug\MyGame.pdb
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\bin\Debug\SwinGame.dll
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csproj.CopyComplete
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\battleships.wav
