@@ -254,11 +254,21 @@ static class UtilityFunctions
 		//SwinGame.DrawFramerate(675, 585, GameResources.GameFont("CourierSmall"));
 	}
 
+	/// <summary>
+	/// Adds an explosion instance wherever there's a successful hit
+	/// </summary>
+	/// <param name="row">the integral row identifier of the point of hit</param>
+	/// <param name="column">the integral column identifier of the point of the hit</param>
 	public static void AddExplosion(int row, int col)
 	{
 		AddAnimation(row, col, "Explosion");
 	}
 
+	/// <summary>
+	/// Adds a splash instance wherever there's an unsuccessful hit / a miss
+	/// </summary>
+	/// <param name="row">the integral row identifier of the point of miss/param>
+	/// <param name="column">the integral column identifier of the point of the miss</param>
 	public static void AddSplash(int row, int col)
 	{
 		AddAnimation(row, col, "Splash");
@@ -266,6 +276,13 @@ static class UtilityFunctions
 
 
 	private static List<Sprite> _Animations = new List<Sprite>();
+	
+	/// <summary>
+	/// Adds the appropriate animation associated with the user's action
+	/// </summary>
+	/// <param name="row">the integral row identifier of the point of contact/param>
+	/// <param name="column">the integral column identifier of the point of the contact</param>
+	/// <param name="image">the image that gets stored in the local object for the particular instance</param>
 	private static void AddAnimation(int row, int col, string image)
 	{
 		Sprite s = default(Sprite);
@@ -285,6 +302,9 @@ static class UtilityFunctions
 		_Animations.Add(s);
 	}
 
+	/// <summary>
+	/// updates the animation in the list
+	/// </summary> 
 	public static void UpdateAnimations()
 	{
 		List<Sprite> ended = new List<Sprite>();
@@ -301,6 +321,9 @@ static class UtilityFunctions
 		}
 	}
 
+	/// <summary>
+	/// Draws animation at the required instance from the list
+	/// </summary>
 	public static void DrawAnimations()
 	{
 		foreach (Sprite s in _Animations) {
@@ -308,6 +331,9 @@ static class UtilityFunctions
 		}
 	}
 
+	/// <summary>
+	/// Updates the animation using UpdateAnimations and then calls DrawScreen() function
+	/// </summary>
 	public static void DrawAnimationSequence()
 	{
 		int i = 0;
