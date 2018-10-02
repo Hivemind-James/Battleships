@@ -14,7 +14,7 @@ using SwinGameSDK;
 static class DeploymentController
 {
     /// <summary>
-    /// statis calues for ship size
+    /// static values for ship size
     /// </summary>
 	private const int SHIPS_TOP = 98;
 	private const int SHIPS_LEFT = 20;
@@ -45,7 +45,7 @@ static class DeploymentController
 	/// </summary>
 	/// <remarks>
 	/// Involves selecting the ships, deloying ships, changing the direction
-	/// of the ships to add, randomising deployment, end then ending
+	/// of the ships to add, randomize deployment and, then ending
 	/// deployment
 	/// </remarks>
 	public static void HandleDeploymentInput()
@@ -61,13 +61,13 @@ static class DeploymentController
 			_currentDirection = Direction.UpDown;
 		}
         /// <summary>
-        /// changes ship orientation to horisontal
+        /// changes ship orientation to horizontal
         /// </summary>
         if (SwinGame.KeyTyped(KeyCode.LeftKey) | SwinGame.KeyTyped(KeyCode.RightKey)) {
 			_currentDirection = Direction.LeftRight;
 		}
         /// <summary>
-        /// if r key is pressed it randomply places the ships.
+        /// if r key is pressed it randomly places the ships.
         /// </summary> 
         if (SwinGame.KeyTyped(KeyCode.RKey)) {
 			GameController.HumanPlayer.RandomizeDeployment();
@@ -101,7 +101,7 @@ static class DeploymentController
 	/// the current ship if that is the case.
 	/// </summary>
 	/// <remarks>
-	/// If the click is in the grid it deploys to the selected location
+	/// If the click is in the grid it deploys ship to the selected location
 	/// with the indicated direction
 	/// </remarks>
 	private static void DoDeployClick()
@@ -131,7 +131,7 @@ static class DeploymentController
 
 	/// <summary>
 	/// Draws the deployment screen showing the field and the ships
-	/// that the player can deploy.
+	/// that the player can deploy ships in.
 	/// </summary>
 	public static void DrawDeployment()
 	{
@@ -140,7 +140,7 @@ static class DeploymentController
 		//Draw the Left/Right and Up/Down buttons (orientation)
 		if (_currentDirection == Direction.LeftRight) {
 			SwinGame.DrawBitmap(GameResources.GameImage("LeftRightButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
-		} else {
+		} else if (_currentDirection == Direction.LeftRight) {
 			SwinGame.DrawBitmap(GameResources.GameImage("UpDownButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
 
 		}
@@ -177,7 +177,7 @@ static class DeploymentController
 	/// Gets the ship that the mouse is currently over in the selection panel.
 	/// </summary>
 	/// <returns>
-    /// The ship selected or none
+    /// Checks whether a ship selected or not
     /// </returns>
 	private static ShipName GetShipMouseIsOver()
 	{

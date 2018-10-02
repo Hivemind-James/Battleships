@@ -51,6 +51,11 @@ public static class GameController
 		get { return _ai; }
 	}
 
+	/// <summary>
+	/// The GameController handles the state of the game
+	/// depending upon the user's prompt whether to continue
+	/// with game or to quit it
+	/// </summary>
 	static GameController()
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
@@ -119,6 +124,12 @@ public static class GameController
 		SwinGame.RefreshScreen();
 	}
 
+	/// <summary>
+	/// Plays the hit sequence sound when a player successfully hits a ship
+	/// </sumamry>
+	/// <param name="row">the integral row identifier of the point of hit</param>
+	/// <param name="column">the integral column identifier of the point of the hit</param>
+	/// <param name="showAnimation">a bool condition to check the need of an explosion</param>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -130,6 +141,12 @@ public static class GameController
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
+	/// <summary>
+	/// Plays teh miss sequence sound when a player unsuccessfully hits an empty coordinate
+	/// </summary>
+	/// <param name="row">the integral row identifier of the point of hit</param>
+	/// <param name="column">the integral column identifier of the point of the hit</param>
+	/// <param name="showAnimation">a bool condition to check the need of an explosion</param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
