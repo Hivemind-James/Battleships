@@ -70,7 +70,6 @@ C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Ba
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\panels\FileDialog.txt
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\error.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\hit.wav
-C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\horrordrone.mp3
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\lose.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\sink.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\SwinGameStart.ogg
@@ -153,3 +152,4 @@ D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTe
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\bin\Debug\SwinGame.dll
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csproj.CopyComplete
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\battleships.wav
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\deploy_play_button_disabled.png
