@@ -164,8 +164,9 @@ public static class GameController
 			case ResultOfAttack.Destroyed:
 				PlayHitSequence(result.Row, result.Column, isHuman);
 				Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
+                SwinGame.DrawBitmap(GameResources.GameImage("SunkBattleship"), 0, 0);
 
-				break;
+                break;
 			case ResultOfAttack.GameOver:
 				PlayHitSequence(result.Row, result.Column, isHuman);
 				Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
