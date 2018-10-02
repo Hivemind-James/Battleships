@@ -25,15 +25,41 @@ H:\Labs\2018\BB\GameTemplate\bin\Debug\SwinGame.dll
 H:\Labs\2018\BB\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csprojResolveAssemblyReference.cache
 H:\Labs\2018\BB\GameTemplate\obj\x86\Debug-Windows\MyGame.exe
 H:\Labs\2018\BB\GameTemplate\obj\x86\Debug-Windows\MyGame.pdb
+<<<<<<< HEAD
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\animations\splash.txt
+=======
+>>>>>>> Meet
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\animations\startup.txt
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\bundles\FileDialog.txt
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\bundles\splash.txt
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\fonts\arial.ttf
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\fonts\cour.ttf
+<<<<<<< HEAD
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\fonts\ffaccess.ttf
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\fonts\maven_pro_regular.ttf
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\highscores.txt
+=======
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\fdFile.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\fdFolder.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\error.wav
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\SwinGame.icns
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\SwinGame.ico
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\.DS_Store
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\animations\splash.txt
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\fonts\ffaccess.ttf
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\highscores.txt
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\.DS_Store
+>>>>>>> Meet
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\deploy.jpg
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\deploy_button_hl.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\deploy_dir_button_horiz.png
@@ -42,6 +68,7 @@ C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Ba
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\deploy_randomize_button.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\discover.jpg
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\explosion.png
+<<<<<<< HEAD
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\fdFile.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\fdFolder.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_Active.png
@@ -49,6 +76,8 @@ C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Ba
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_Inactive.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_Scroll.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+=======
+>>>>>>> Meet
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\loader_empty.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\loader_full.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\main_page.jpg
@@ -64,21 +93,30 @@ C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Ba
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\ship_deploy_vert_5.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\splash.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\SplashBack.png
+<<<<<<< HEAD
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\Swinburne.jpg
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\SwinGameAni.jpg
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\SwinGameAni.png
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\panels\FileDialog.txt
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\error.wav
+=======
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\images\SwinGameAni.jpg
+>>>>>>> Meet
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\hit.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\horrordrone.mp3
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\lose.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\sink.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\SwinGameStart.ogg
+<<<<<<< HEAD
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\SwinGameStart.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\watershot.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\winner.wav
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\SwinGame.icns
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\SwinGame.ico
+=======
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\watershot.wav
+C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\winner.wav
+>>>>>>> Meet
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\MyGame.exe.config
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\MyGame.exe
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\MyGame.pdb
@@ -88,6 +126,7 @@ C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Ba
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csproj.CopyComplete
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGame.pdb
+<<<<<<< HEAD
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csprojAssemblyReference.cache
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csproj.CoreCompileInputs.cache
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGame.exe
@@ -153,3 +192,5 @@ D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTe
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\bin\Debug\SwinGame.dll
 D:\ComputerScience\Sem2\Development Porject 1\Battleship Code\Battleships\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csproj.CopyComplete
 C:\Users\James\Desktop\Code\Software Development Project 1\Week 4\Battleships\Battleships\GameTemplate\bin\Debug\Resources\sounds\battleships.wav
+=======
+>>>>>>> Meet
