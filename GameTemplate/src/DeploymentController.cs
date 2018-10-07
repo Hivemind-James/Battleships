@@ -39,7 +39,7 @@ static class DeploymentController
 	private const int TEXT_OFFSET = 5;
 	private static Direction _currentDirection = Direction.UpDown;
 
-	private static ShipName _selectedShip = ShipName.Tug;
+	private static ShipName _selectedShip = ShipName.Submarine;
 	/// <summary>
 	/// Handles user input for the Deployment phase of the game.
 	/// </summary>

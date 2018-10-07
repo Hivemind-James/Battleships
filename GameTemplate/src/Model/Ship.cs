@@ -91,9 +91,23 @@ public class Ship
 		_shipName = ship;
 		_tiles = new List<Tile>();
 
-		//gets the ship size from the enumarator
-		_sizeOfShip = (int) _shipName;
-        if (_sizeOfShip < 2) _sizeOfShip = 3; 
+        //gets the ship size from the enumarator
+        switch (_shipName)
+        {
+            case ShipName.Submarine:
+                _sizeOfShip = 2;
+                break;
+            case ShipName.Gunship:
+            case ShipName.Destroyer:
+                _sizeOfShip = 3;
+                break;
+            case ShipName.Battleship:
+                _sizeOfShip = 4;
+                break;
+            case ShipName.AircraftCarrier:
+                _sizeOfShip = 5;
+                break;
+        }
 	}
 
 	/// <summary>
