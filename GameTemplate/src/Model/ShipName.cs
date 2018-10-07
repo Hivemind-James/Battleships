@@ -12,8 +12,8 @@ using System.Diagnostics;
 public enum ShipName
 {
 	None = 0,
-	Tug = 1,
-	Submarine = 2,
+	Submarine = 1,
+    Gunship = 2,
 	Destroyer = 3,
 	Battleship = 4,
 	AircraftCarrier = 5
