@@ -140,7 +140,7 @@ static class DeploymentController
 		//Draw the Left/Right and Up/Down buttons (orientation)
 		if (_currentDirection == Direction.LeftRight) {
 			SwinGame.DrawBitmap(GameResources.GameImage("LeftRightButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
-		} else if (_currentDirection == Direction.LeftRight) {
+		} else if (_currentDirection == Direction.UpDown) {
 			SwinGame.DrawBitmap(GameResources.GameImage("UpDownButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
 
 		}

@@ -16,27 +16,32 @@ using SwinGameSDK;
 static class MenuController
 {
 
-	/// <summary>
-	/// The menu structure for the game.
-	/// </summary>
+    /// <summary>
+    /// The menu structure for the game.
+    /// </summary>
     // this draws the menu buttons and sets the regions.
-	private static readonly string[][] _menuStructure = {
-		new string[] {
-			"PLAY",
-			"SETUP",
-			"SCORES",
-			"QUIT"
-		},
-		new string[] {
-			"RETURN",
-			"SURRENDER",
-			"QUIT"
-		},
-		new string[] {
-			"EASY",
-			"MEDIUM",
-			"HARD"
-		}
+    private static readonly string[][] _menuStructure = {
+        new string[] {
+            "PLAY",
+            "SETUP",
+            "SCORES",
+            "MUSIC",
+            "QUIT"
+        },
+        new string[] {
+            "RETURN",
+            "SURRENDER",
+            "QUIT"
+        },
+        new string[] {
+            "EASY",
+            "MEDIUM",
+            "HARD"
+        },
+        new string[] {
+            "ON",
+            "OFF"
+        }
 
 	};
 	private const int MENU_TOP = 575;
@@ -45,26 +50,32 @@ static class MenuController
 	private const int BUTTON_WIDTH = 75;
 	private const int BUTTON_HEIGHT = 15;
 	private const int BUTTON_SEP = BUTTON_WIDTH + MENU_GAP;
-
 	private const int TEXT_OFFSET = 0;
+
 	private const int MAIN_MENU = 0;
 	private const int GAME_MENU = 1;
-
 	private const int SETUP_MENU = 2;
+    private const int MUSIC_MENU = 3;
+
 	private const int MAIN_MENU_PLAY_BUTTON = 0;
 	private const int MAIN_MENU_SETUP_BUTTON = 1;
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
+    private const int MAIN_MENU_MUSIC_BUTTON = 3;
+    private const int MAIN_MENU_QUIT_BUTTON = 4;
 
-	private const int MAIN_MENU_QUIT_BUTTON = 3;
-	private const int SETUP_MENU_EASY_BUTTON = 0;
+    private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
-
 	private const int SETUP_MENU_EXIT_BUTTON = 3;
+
+    //MUSIC BUTTON
+    private const int MUSIC_MENU_ON_BUTTON = 0;
+    private const int MUSIC_MENU_OFF_BUTTON = 1;
+
 	private const int GAME_MENU_RETURN_BUTTON = 0;
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
-
 	private const int GAME_MENU_QUIT_BUTTON = 2;
+
 	private static readonly Color MENU_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
 
 	private static readonly Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(1, 57, 86, 255);
@@ -88,6 +99,20 @@ static class MenuController
 			HandleMenuInput(MAIN_MENU, 0, 0);
 		}
 	}
+
+    /// <summary>
+    ///  Draws the music menu in the screen
+    ///  </summary>
+    public static void HandleMusicMenuInput()
+    {
+        bool handled = false;
+        handled = HandleMenuInput(MUSIC_MENU, 1, 3);
+
+        if (!handled)
+        {
+            HandleMenuInput(MAIN_MENU, 0, 0);
+        }
+    }
 
 	/// <summary>
 	/// Handle input in the game menu.
@@ -171,6 +196,18 @@ static class MenuController
 		DrawButtons(MAIN_MENU);
 		DrawButtons(SETUP_MENU, 1, 1);
 	}
+
+    /// <summary>
+    /// Draws the Music menu to the screen
+    /// </summary>
+    /// <remarks>
+    /// Also shows the main menu
+    /// </remarks>
+    public static void DrawMusicSettings()
+    {
+        DrawButtons(MAIN_MENU);
+        DrawButtons(MUSIC_MENU, 1, 3);
+    }
 
 	/// <summary>
 	/// Draw the buttons associated with a top level menu.
@@ -260,6 +297,9 @@ static class MenuController
 			case GAME_MENU:
 				PerformGameMenuAction(button);
 				break;
+            case MUSIC_MENU:
+                PerformMusicMenuAction(button);
+                break;
 		}
 	}
 
@@ -279,6 +319,9 @@ static class MenuController
 			case MAIN_MENU_TOP_SCORES_BUTTON:
 				GameController.AddNewState(GameState.ViewingHighScores);
 				break;
+            case MAIN_MENU_MUSIC_BUTTON:
+                GameController.AddNewState(GameState.AlteringMusic);
+                break;
 			case MAIN_MENU_QUIT_BUTTON:
 				GameController.EndCurrentState();
 				break;
@@ -327,4 +370,23 @@ static class MenuController
 				break;
 		}
 	}
+
+    /// <summary>
+    /// The music menu was clocked, perform the button's action.
+    /// </summary>
+    /// <param name="button">the button pressed</param>
+    private static void PerformMusicMenuAction(int button)
+    {
+        switch (button)
+        {
+            case MUSIC_MENU_ON_BUTTON:
+                SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+                break;
+            case MUSIC_MENU_OFF_BUTTON:
+                SwinGame.StopMusic();
+                break;
+        }
+
+        GameController.EndCurrentState();
+    }
 }

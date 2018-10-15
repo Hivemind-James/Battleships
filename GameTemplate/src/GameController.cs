@@ -306,7 +306,10 @@ public static class GameController
 			case GameState.AlteringSettings:
 				MenuController.HandleSetupMenuInput();
 				break;
-			case GameState.Deploying:
+            case GameState.AlteringMusic:
+                MenuController.HandleMusicMenuInput();
+                break;
+            case GameState.Deploying:
 				DeploymentController.HandleDeploymentInput();
 				break;
 			case GameState.Discovering:
@@ -343,6 +346,9 @@ public static class GameController
 			case GameState.AlteringSettings:
 				MenuController.DrawSettings();
 				break;
+            case GameState.AlteringMusic:
+                MenuController.DrawMusicSettings();
+                break;
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
 				break;
